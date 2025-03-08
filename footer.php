@@ -19,3 +19,5 @@
         <p class="mb-0 py-3 text-muted small">&copy; Copyright 2024 Made with <i class="ti-heart text-danger"></i> By <a href="#">DevCRUD</a></p>
     </div>
     <!-- end of page footer -->
+
+    <?php wp_footer(); ?>

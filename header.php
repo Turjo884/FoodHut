@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with FoodHut landing page.">
     <meta name="author" content="Devcrud">
+
+    <?php wp_head(); ?>
    
     <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css"> -->
 
-    <link rel="stylesheet" href="assets/vendors/animate/animate.css">
+    <!-- <link rel="stylesheet" href="assets/vendors/animate/animate.css"> -->
 
     <!-- Bootstrap + FoodHut main styles -->
-	<link rel="stylesheet" href="assets/css/foodhut.css">
+	<!-- <link rel="stylesheet" href="assets/css/foodhut.css"> -->
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     
@@ -37,7 +39,7 @@
                 </li>
             </ul>
             <a class="navbar-brand m-auto" href="index.html">
-                <img src="assets/imgs/logo.svg" class="brand-img" alt="">
+                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo.svg" class="brand-img" alt="">
                 <span class="brand-txt">Food Hut</span>
             </a>
             <ul class="navbar-nav">
@@ -56,3 +58,4 @@
             </ul>
         </div>
     </nav>
+

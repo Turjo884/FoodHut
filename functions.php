@@ -71,12 +71,25 @@ if ( ! function_exists( 'foodhut_setup' ) ) :
     function foodhut_scripts() {
         
         // Start CSS Script
-        wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slider.css', array(), '1.1', 'all' );
+        wp_enqueue_style( 'themify-icons', get_template_directory_uri() . '/assets/vendors/themify-icons.css', array(), '1.0', 'all' );
+
+        wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/vendors/animate/animate.css', array(), '3.7.0', 'all' );
+
+        wp_enqueue_style( 'foodhut', get_template_directory_uri() . '/assets/css/foodhut.css', array(), '1.0', 'all' );
+
 
         wp_enqueue_style( 'style', get_stylesheet_uri() );
     
         // Start Js Script
-        wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), 1.1, true );
+        wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.bundle.js', array( 'jquery' ), '4.3.1', true );
+
+        wp_enqueue_script( 'bootstrap-affix', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.affix.js', array( 'imagesloaded' ), '3.3.6', true );
+
+        wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.js', array( 'jquery' ), '4.3.1', true );
+
+        wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/vendors/wow/wow.js', array( 'jquery' ), '4.3.1', true );
+
+        wp_enqueue_script( 'foodhut', get_template_directory_uri() . 'assets/js/foodhut.js', array( 'jquery' ), '1.0.0', true );
     
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
