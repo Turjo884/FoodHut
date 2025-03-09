@@ -96,3 +96,8 @@ if ( ! function_exists( 'foodhut_setup' ) ) :
         }
     }
     add_action( 'wp_enqueue_scripts', 'foodhut_scripts' );
+
+
+    // Custom functionlalities
+    include_once('inc/template-function.php');
+    include_once('inc/foodhut-kirki.php');
