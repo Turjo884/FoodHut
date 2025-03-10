@@ -4,34 +4,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="menu.html">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#book-table">Book-Table</a>
-                </li>
-            </ul>
-                <?php echo foodhut_logo(); ?>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#testmonial">Reviews</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="components.html" class="btn btn-primary ml-xl-4">Components</a>
-                </li>
-            </ul>
+
+            <!-- Start Left Menu -->
+                <?php exdos_left_menu(); ?>
+            <!-- End Left Menu -->
+            
+            <!-- Start Header Logo -->
+                <?php foodhut_logo(); ?>
+            <!-- End Header Logo -->
+
+            <!-- Start Right Menu -->
+                <?php exdos_right_menu(); ?> 
+            <!-- End Right Menu  -->
+            
         </div>
     </nav>

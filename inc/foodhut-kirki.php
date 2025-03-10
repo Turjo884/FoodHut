@@ -10,21 +10,6 @@ new \Kirki\Panel(
 	]
 );
 
-// Header 
-function header_info_kirki(){
-    // Header Section
-    new \Kirki\Section(
-        'header_left_menu',
-        [
-            'title'       => esc_html__( 'Header Left Menu', 'kirki' ),
-            'description' => esc_html__( 'This is header left menu widget', 'kirki' ),
-            'panel'       => 'foodhut_panel_id',
-            'priority'    => 160,
-        ]
-    );
-}
-header_info_kirki();
-
 
 // Header 
 function header_logo_kirki(){

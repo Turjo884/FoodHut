@@ -41,7 +41,8 @@ if ( ! function_exists( 'foodhut_setup' ) ) :
     
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus( array(
-            'primary' => __( 'Primary Menu', 'foodhut' ),
+            'left-menu' => __( 'Left Menu', 'foodhut' ),
+            'right-menu' => __( 'Right Menu', 'foodhut' ),
         ) );
     
         /*
@@ -87,6 +88,8 @@ if ( ! function_exists( 'foodhut_setup' ) ) :
 
         wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.js', array( 'jquery' ), '4.3.1', true );
 
+        wp_enqueue_script( 'bootstrap-min', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min', array( 'jquery' ), '4.3.1', true );
+
         wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/vendors/wow/wow.js', array( 'jquery' ), '4.3.1', true );
 
         wp_enqueue_script( 'foodhut', get_template_directory_uri() . 'assets/js/foodhut.js', array( 'jquery' ), '1.0.0', true );
@@ -99,5 +102,6 @@ if ( ! function_exists( 'foodhut_setup' ) ) :
 
 
     // Custom functionlalities
+    include_once('inc/nav-walker.php');
     include_once('inc/template-function.php');
     include_once('inc/foodhut-kirki.php');

@@ -8,7 +8,27 @@ function foodhut_logo(){
         <span class="brand-txt">Food Hut</span>
     </a>
     <?php
-
-    
 }
+
+
+function exdos_left_menu(){
+    wp_nav_menu(array(
+        'theme_location' => 'left-menu',
+        'container' => '',
+        'menu_class' => 'navbar-nav',
+        'fallback_cb' => 'FoodHut_Walker_Nav_Menu::fallback',
+        'walker' => new FoodHut_Walker_Nav_Menu,
+      ));
+}
+
+function exdos_right_menu(){
+    wp_nav_menu(array(
+        'theme_location' => 'right-menu',
+        'container' => '',
+        'menu_class' => 'navbar-nav',
+        'fallback_cb' => 'FoodHut_Walker_Nav_Menu::fallback',
+        'walker' => new FoodHut_Walker_Nav_Menu,
+      ));
+}
+
 ?>
